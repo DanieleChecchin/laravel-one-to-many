@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Type extends Model
 {
     use HasFactory;
+
+    //Aggiungo al modello un metodo che mi restituisca tutti i possibili progetti ad esso connessi
+    public function projects(){
+        return $this->hasMany(Project::class);
+    }
 }
