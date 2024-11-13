@@ -70,7 +70,7 @@ class ProjectController extends Controller
 
         $project->update($formData);
 
-        return redirect()->route('admin.projects.index')->with('success', 'Progetto aggiornato con successo!');
+        return redirect()->route('admin.projects.index')->with('success', 'Progetto aggiornato!');
     }
 
     /**
@@ -78,6 +78,9 @@ class ProjectController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        $project->delete();
+
+        return redirect()->route('admin.projects.index')->with('success', 'Progetto eliminato!');
     }
 }
