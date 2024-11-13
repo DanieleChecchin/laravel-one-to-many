@@ -11,8 +11,8 @@
                     @csrf
 
                     <div class="mb-3">
-                        <label for="title" class="form-label">Nome del progetto</label>
-                        <input type="text" name="title" id="title" class="form-control" required>
+                        <label for="name" class="form-label">Nome del progetto</label>
+                        <input type="text" name="name" id="name" class="form-control" required>
                     </div>
 
                     <div class="mb-3">
@@ -25,7 +25,7 @@
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-success">Salva Progetto</button>
+                    <button type="submit" class="btn btn-success">Crea il nuovo Progetto</button>
                 </form>
             </div>
         </div>
