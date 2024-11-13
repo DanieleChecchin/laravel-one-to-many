@@ -27,6 +27,8 @@
                             <td>
                                 <a class="btn btn-sm btn-info"
                                     href="{{ route('admin.projects.show', $project->id) }}">Show</a>
+                                <a href="{{ route('admin.projects.edit', $project) }}"
+                                    class="btn btn-warning btn-sm">Modifica</a>
                             </td>
                         </tr>
                     @empty
