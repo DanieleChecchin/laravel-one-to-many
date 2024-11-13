@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Project;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,8 +13,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = [];
-        return view('admin.projects.index', compact ('projects'));
+        $projects = Project::all();
+        return view('admin.projects.index', compact('projects'));
     }
 
     /**
@@ -21,7 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('admin.projects.create', compact ('projects'));
+        return view('admin.projects.create', compact('projects'));
     }
 
     /**
@@ -37,7 +38,8 @@ class ProjectController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $project = Project::findOrFail($id);
+        return view('admin.projects.show', compact('project'));
     }
 
     /**
