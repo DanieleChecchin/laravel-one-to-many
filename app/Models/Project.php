@@ -9,7 +9,8 @@ class Project extends Model
 {
     use HasFactory;
 
-    public function type(){
-        return $this->belongTo(Type::class);
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
     }
 }

@@ -19,10 +19,14 @@
                     <tbody>
                         <tr>
                             <td>
-                                {{ $project['id'] }}
+                                ID progetto: {{ $project->id }}
                             </td>
                             <td>
-                                {{ $project['name'] }}
+                                Nome del progetto: {{ $project->name }}
+                            </td>
+                            <td>
+                                Tipologia del progetto:
+                                {{ $project->type ? $project->type->name : 'Nessuna tipologia associata' }}
                             </td>
                         </tr>
                     </tbody>
