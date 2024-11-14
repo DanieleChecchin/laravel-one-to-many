@@ -24,6 +24,7 @@
                         <tr>
                             <td> {{ $project->id }} </td>
                             <td> {{ $project->name }} </td>
+                            <td>{{ $project->type ? $project->type->name : 'N/A' }}</td>
                             <td>
                                 <a class="btn btn-sm btn-info"
                                     href="{{ route('admin.projects.show', $project->id) }}">Show</a>
